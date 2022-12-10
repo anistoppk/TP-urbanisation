@@ -1,0 +1,21 @@
+<div class="container">
+    <div *ngFor="let item of items" class="card">
+        <div class="img-sec">
+            <img [src]="item?.imageUrl" [alt]="item?.name" [title]="item?.name">
+        </div>
+        <div class="card-content">
+            <div>
+                <span><b>Price:</b> {{item?.price | currency : 'USD'}}</span>
+            </div>
+            <div>
+                <span><b>Availability:</b> {{item?.availableQty}}</span>
+            </div>
+            <div>
+                <span><b>Discription:</b> {{item?.description}}</span>
+            </div>
+            <div>
+                <button routerLink="menu-items/menu-details/1" mat-raised-button color="primary">View Details</button>
+            </div>
+        </div>
+    </div>
+</div>
